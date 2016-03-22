@@ -1,0 +1,10 @@
+E:\vsnetproj\AlibabaOA\AlibabaOA.DAL\bin\Debug\AlibabaOA.DAL.dll.config
+E:\vsnetproj\AlibabaOA\AlibabaOA.DAL\bin\Debug\AlibabaOA.DAL.dll
+E:\vsnetproj\AlibabaOA\AlibabaOA.DAL\bin\Debug\AlibabaOA.DAL.pdb
+E:\vsnetproj\AlibabaOA\AlibabaOA.DAL\bin\Debug\EntityFramework.dll
+E:\vsnetproj\AlibabaOA\AlibabaOA.DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\vsnetproj\AlibabaOA\AlibabaOA.DAL\bin\Debug\EntityFramework.xml
+E:\vsnetproj\AlibabaOA\AlibabaOA.DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\vsnetproj\AlibabaOA\AlibabaOA.DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+E:\vsnetproj\AlibabaOA\AlibabaOA.DAL\obj\Debug\AlibabaOA.DAL.dll
+E:\vsnetproj\AlibabaOA\AlibabaOA.DAL\obj\Debug\AlibabaOA.DAL.pdb

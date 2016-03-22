@@ -1,0 +1,12 @@
+E:\vsnetproj\AlibabaOA\ConsoleAppTest\bin\Debug\ConsoleAppTest.exe.config
+E:\vsnetproj\AlibabaOA\ConsoleAppTest\bin\Debug\ConsoleAppTest.exe
+E:\vsnetproj\AlibabaOA\ConsoleAppTest\bin\Debug\ConsoleAppTest.pdb
+E:\vsnetproj\AlibabaOA\ConsoleAppTest\bin\Debug\AlibabaOA.DAL.dll
+E:\vsnetproj\AlibabaOA\ConsoleAppTest\bin\Debug\EntityFramework.dll
+E:\vsnetproj\AlibabaOA\ConsoleAppTest\bin\Debug\EntityFramework.SqlServer.dll
+E:\vsnetproj\AlibabaOA\ConsoleAppTest\bin\Debug\AlibabaOA.DAL.pdb
+E:\vsnetproj\AlibabaOA\ConsoleAppTest\bin\Debug\EntityFramework.xml
+E:\vsnetproj\AlibabaOA\ConsoleAppTest\bin\Debug\EntityFramework.SqlServer.xml
+E:\vsnetproj\AlibabaOA\ConsoleAppTest\obj\Debug\ConsoleAppTest.csprojResolveAssemblyReference.cache
+E:\vsnetproj\AlibabaOA\ConsoleAppTest\obj\Debug\ConsoleAppTest.exe
+E:\vsnetproj\AlibabaOA\ConsoleAppTest\obj\Debug\ConsoleAppTest.pdb

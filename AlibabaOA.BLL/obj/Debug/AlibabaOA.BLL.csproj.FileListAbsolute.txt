@@ -1,0 +1,5 @@
+E:\vsnetproj\AlibabaOA\AlibabaOA.BLL\bin\Debug\AlibabaOA.BLL.dll
+E:\vsnetproj\AlibabaOA\AlibabaOA.BLL\bin\Debug\AlibabaOA.BLL.pdb
+E:\vsnetproj\AlibabaOA\AlibabaOA.BLL\obj\Debug\AlibabaOA.BLL.csprojResolveAssemblyReference.cache
+E:\vsnetproj\AlibabaOA\AlibabaOA.BLL\obj\Debug\AlibabaOA.BLL.dll
+E:\vsnetproj\AlibabaOA\AlibabaOA.BLL\obj\Debug\AlibabaOA.BLL.pdb

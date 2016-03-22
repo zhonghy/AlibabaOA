@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AgentModelStoreContainer" CdmEntityContainer="AgentEntities">
+    <EntitySetMapping Name="Agents">
+      <EntityTypeMapping TypeName="AgentModel.Agent">
+        <MappingFragment StoreEntitySet="Agent">
+          <ScalarProperty Name="AgentID" ColumnName="AgentID" />
+          <ComplexProperty Name="Name">
+            <ScalarProperty Name="LastName" ColumnName="LastName" />
+            <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          </ComplexProperty>
+          <ComplexProperty Name="Address">
+            <ScalarProperty Name="ZIPCode" ColumnName="ZIPCode" />
+            <ScalarProperty Name="State" ColumnName="State" />
+            <ScalarProperty Name="City" ColumnName="City" />
+            <ScalarProperty Name="AddressLine2" ColumnName="AddressLine2" />
+            <ScalarProperty Name="AddressLine1" ColumnName="AddressLine1" />
+          </ComplexProperty>
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

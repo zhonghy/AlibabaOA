@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlibabaOAWeb", "AlibabaOA\AlibabaOAWeb.csproj", "{568A18BA-76BD-4E1C-845E-333B919E5744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlibabaOA.BLL", "AlibabaOA.BLL\AlibabaOA.BLL.csproj", "{9E8D723E-C0D5-42EB-AA4B-E58107249786}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlibabaOA.DAL", "AlibabaOA.DAL\AlibabaOA.DAL.csproj", "{B6FE9F71-01A8-4548-8537-2B6F22AD903E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{5D02B900-D92F-494A-B1C0-B3DF579CF25D}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitProject", "NUnitProject\NUnitProject.csproj", "{208C492C-0C4D-4AA2-923C-E99604A19485}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppTest", "ConsoleAppTest\ConsoleAppTest.csproj", "{B10A2550-95B4-479B-A058-AFC6BF8A7798}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{568A18BA-76BD-4E1C-845E-333B919E5744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{568A18BA-76BD-4E1C-845E-333B919E5744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{568A18BA-76BD-4E1C-845E-333B919E5744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{568A18BA-76BD-4E1C-845E-333B919E5744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E8D723E-C0D5-42EB-AA4B-E58107249786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E8D723E-C0D5-42EB-AA4B-E58107249786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E8D723E-C0D5-42EB-AA4B-E58107249786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E8D723E-C0D5-42EB-AA4B-E58107249786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6FE9F71-01A8-4548-8537-2B6F22AD903E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6FE9F71-01A8-4548-8537-2B6F22AD903E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6FE9F71-01A8-4548-8537-2B6F22AD903E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6FE9F71-01A8-4548-8537-2B6F22AD903E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{208C492C-0C4D-4AA2-923C-E99604A19485}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{208C492C-0C4D-4AA2-923C-E99604A19485}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{208C492C-0C4D-4AA2-923C-E99604A19485}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{208C492C-0C4D-4AA2-923C-E99604A19485}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B10A2550-95B4-479B-A058-AFC6BF8A7798}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B10A2550-95B4-479B-A058-AFC6BF8A7798}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B10A2550-95B4-479B-A058-AFC6BF8A7798}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B10A2550-95B4-479B-A058-AFC6BF8A7798}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

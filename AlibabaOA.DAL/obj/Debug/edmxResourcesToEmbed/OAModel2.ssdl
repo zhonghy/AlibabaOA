@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AlbumAndArtistModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Album">
+    <Key>
+      <PropertyRef Name="AlbumId" />
+    </Key>
+    <Property Name="AlbumId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AlbumName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Artist">
+    <Key>
+      <PropertyRef Name="ArtistId" />
+    </Key>
+    <Property Name="ArtistId" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="LinkTable">
+    <Key>
+      <PropertyRef Name="AlbumId" />
+      <PropertyRef Name="ArtistId" />
+    </Key>
+    <Property Name="AlbumId" Type="bigint" Nullable="false" />
+    <Property Name="ArtistId" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_LinkTable_Album">
+    <End Role="Album" Type="Self.Album" Multiplicity="1" />
+    <End Role="LinkTable" Type="Self.LinkTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Album">
+        <PropertyRef Name="AlbumId" />
+      </Principal>
+      <Dependent Role="LinkTable">
+        <PropertyRef Name="AlbumId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LinkTable_Artist">
+    <End Role="Artist" Type="Self.Artist" Multiplicity="1" />
+    <End Role="LinkTable" Type="Self.LinkTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Artist">
+        <PropertyRef Name="ArtistId" />
+      </Principal>
+      <Dependent Role="LinkTable">
+        <PropertyRef Name="ArtistId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="AlbumAndArtistModelStoreContainer">
+    <EntitySet Name="Album" EntityType="Self.Album" Schema="Chapter2" store:Type="Tables" />
+    <EntitySet Name="Artist" EntityType="Self.Artist" Schema="Chapter2" store:Type="Tables" />
+    <EntitySet Name="LinkTable" EntityType="Self.LinkTable" Schema="Chapter2" store:Type="Tables" />
+    <AssociationSet Name="FK_LinkTable_Album" Association="Self.FK_LinkTable_Album">
+      <End Role="Album" EntitySet="Album" />
+      <End Role="LinkTable" EntitySet="LinkTable" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LinkTable_Artist" Association="Self.FK_LinkTable_Artist">
+      <End Role="Artist" EntitySet="Artist" />
+      <End Role="LinkTable" EntitySet="LinkTable" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

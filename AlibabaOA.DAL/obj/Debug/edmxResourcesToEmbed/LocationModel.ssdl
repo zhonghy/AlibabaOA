@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LocationModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="LocationID" />
+    </Key>
+    <Property Name="LocationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="City" Type="nvarchar" MaxLength="50" />
+    <Property Name="State" Type="nvarchar" MaxLength="50" />
+    <Property Name="ZIPCode" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Park">
+    <Key>
+      <PropertyRef Name="ParkID" />
+    </Key>
+    <Property Name="ParkID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="OfficeLocationID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Park_Location">
+    <End Role="Location" Type="Self.Location" Multiplicity="1" />
+    <End Role="Park" Type="Self.Park" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Location">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="Park">
+        <PropertyRef Name="OfficeLocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Park_Location1">
+    <End Role="Location" Type="Self.Location" Multiplicity="1" />
+    <End Role="Park" Type="Self.Park" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Location">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="Park">
+        <PropertyRef Name="ParkID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LocationModelStoreContainer">
+    <EntitySet Name="Location" EntityType="Self.Location" Schema="Chapter2" store:Type="Tables" />
+    <EntitySet Name="Park" EntityType="Self.Park" Schema="Chapter2" store:Type="Tables" />
+    <AssociationSet Name="FK_Park_Location" Association="Self.FK_Park_Location">
+      <End Role="Location" EntitySet="Location" />
+      <End Role="Park" EntitySet="Park" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Park_Location1" Association="Self.FK_Park_Location1">
+      <End Role="Location" EntitySet="Location" />
+      <End Role="Park" EntitySet="Park" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

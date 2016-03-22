@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B6FE9F71-01A8-4548-8537-2B6F22AD903E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AlibabaOA.DAL</RootNamespace>
+    <AssemblyName>AlibabaOA.DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccountEntities.cs" />
+    <Compile Include="Address.cs">
+      <DependentUpon>AgentModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Agent.cs">
+      <DependentUpon>AgentModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AgentModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AgentModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AgentModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AgentModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Associate.cs" />
+    <Compile Include="AssociateEntities.cs" />
+    <Compile Include="AssociateSalary.cs" />
+    <Compile Include="Business.cs" />
+    <Compile Include="BusinessContext.cs" />
+    <Compile Include="CustomerEntities.cs" />
+    <Compile Include="eCommerce.cs" />
+    <Compile Include="Location.cs">
+      <DependentUpon>LocationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LocationModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocationModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LocationModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LocationModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocationModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Name.cs">
+      <DependentUpon>AgentModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Park.cs">
+      <DependentUpon>LocationModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs" />
+    <Compile Include="ProductEFContext.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Retail.cs" />
+    <Compile Include="StudentEntities.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="AgentModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>AgentModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="AgentModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AgentModel.edmx</DependentUpon>
+      <LastGenOutput>AgentModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="AgentModel.edmx.diagram">
+      <DependentUpon>AgentModel.edmx</DependentUpon>
+    </None>
+    <None Include="AgentModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>AgentModel.edmx</DependentUpon>
+      <LastGenOutput>AgentModel.cs</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <EntityDeploy Include="LocationModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LocationModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="LocationModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LocationModel.edmx</DependentUpon>
+      <LastGenOutput>LocationModel.Context.cs</LastGenOutput>
+    </None>
+    <None Include="LocationModel.edmx.diagram">
+      <DependentUpon>LocationModel.edmx</DependentUpon>
+    </None>
+    <None Include="LocationModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LocationModel.edmx</DependentUpon>
+      <LastGenOutput>LocationModel.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

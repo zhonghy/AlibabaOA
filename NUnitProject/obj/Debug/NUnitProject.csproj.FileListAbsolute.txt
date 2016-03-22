@@ -1,0 +1,15 @@
+E:\vsnetproj\AlibabaOA\NUnitProject\obj\Debug\NUnitProject.csprojResolveAssemblyReference.cache
+E:\vsnetproj\AlibabaOA\NUnitProject\bin\Debug\NUnitProject.dll.config
+E:\vsnetproj\AlibabaOA\NUnitProject\bin\Debug\NUnitProject.dll
+E:\vsnetproj\AlibabaOA\NUnitProject\bin\Debug\NUnitProject.pdb
+E:\vsnetproj\AlibabaOA\NUnitProject\bin\Debug\AlibabaOA.DAL.dll
+E:\vsnetproj\AlibabaOA\NUnitProject\bin\Debug\EntityFramework.dll
+E:\vsnetproj\AlibabaOA\NUnitProject\bin\Debug\EntityFramework.SqlServer.dll
+E:\vsnetproj\AlibabaOA\NUnitProject\bin\Debug\nunit.framework.dll
+E:\vsnetproj\AlibabaOA\NUnitProject\bin\Debug\AlibabaOA.DAL.pdb
+E:\vsnetproj\AlibabaOA\NUnitProject\bin\Debug\EntityFramework.xml
+E:\vsnetproj\AlibabaOA\NUnitProject\bin\Debug\EntityFramework.SqlServer.xml
+E:\vsnetproj\AlibabaOA\NUnitProject\bin\Debug\nunit.framework.xml
+E:\vsnetproj\AlibabaOA\NUnitProject\obj\Debug\NUnitProject.dll
+E:\vsnetproj\AlibabaOA\NUnitProject\obj\Debug\NUnitProject.pdb
+E:\vsnetproj\AlibabaOA\NUnitProject\bin\Debug\HibernatingRhinos.Profiler.Appender.dll

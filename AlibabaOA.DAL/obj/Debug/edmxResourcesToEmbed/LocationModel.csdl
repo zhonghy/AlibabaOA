@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LocationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="LocationID" />
+    </Key>
+    <Property Name="LocationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ZIPCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Parks" Relationship="Self.FK_Park_Location" FromRole="Location" ToRole="Park" />
+  </EntityType>
+  <EntityType Name="Park" BaseType="LocationModel.Location">
+    <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="OfficeLocationID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Office" Relationship="Self.FK_Park_Location" FromRole="Park" ToRole="Location" />
+  </EntityType>
+  <Association Name="FK_Park_Location">
+    <End Role="Location" Type="Self.Location" Multiplicity="1" />
+    <End Role="Park" Type="Self.Park" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Location">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="Park">
+        <PropertyRef Name="OfficeLocationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LocationEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Locations" EntityType="Self.Location" />
+    <AssociationSet Name="FK_Park_Location" Association="Self.FK_Park_Location">
+      <End Role="Location" EntitySet="Locations" />
+      <End Role="Park" EntitySet="Locations" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
